@@ -11,8 +11,8 @@ OUTPUT_DIR = Path("data/raw/EUNE_HIGH_ELO")
 # tysięcy zapytań API.
 TIERS = ["CHALLENGER", "GRANDMASTER", "MASTER"]
 
-MAX_PLAYERS_PER_TIER = 20
-MATCHES_PER_PLAYER = 10
+MAX_PLAYERS_PER_TIER = 100
+MATCHES_PER_PLAYER = 20
 
 
 def get_existing_match_ids():

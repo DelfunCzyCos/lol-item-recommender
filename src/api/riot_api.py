@@ -1,11 +1,15 @@
-
 import os
 import time
 import requests
+from pathlib import Path
 from urllib.parse import quote
 from dotenv import load_dotenv
 
-load_dotenv()
+# Ścieżka do głównego folderu projektu
+BASE_DIR = Path(__file__).resolve().parents[2]
+
+# Wczytanie .env z głównego folderu projektu
+load_dotenv(BASE_DIR / ".env", override=True)
 
 
 class RiotAPI:
@@ -105,5 +109,11 @@ class RiotAPI:
                 print(f"Błąd pobierania meczu {match_id}: {error}")
 
         return matches
+
+    def get_match_timeline(self, match_id):
+        match_id = quote(match_id, safe="")
+        endpoint = f"/lol/match/v5/matches/{match_id}/timeline"
+
+        return self.request(endpoint)
 
 

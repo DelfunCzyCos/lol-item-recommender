@@ -21,7 +21,7 @@ def main():
 
     # Ujednolicamy nazwy kolumn ID
     if "itemId" in catalog.columns:
-     catalog = catalog.rename(columns={"itemId": "item_id"})
+        catalog = catalog.rename(columns={"itemId": "item_id"})
     elif "ID" in catalog.columns:
         catalog = catalog.rename(columns={"ID": "item_id"})
     elif "id" in catalog.columns:
@@ -46,7 +46,8 @@ def main():
             "plaintext",
             "price",
             "image_url",
-            "version"
+            "version",
+            "category"
         ]
         if column in catalog.columns
     ]
@@ -59,7 +60,7 @@ def main():
     result = stats.merge(
         catalog,
         on="item_id",
-        how="left"
+        how="inner"
     )
 
     output_file = DATA_DIR / "item_stats_high_elo_named.csv"
