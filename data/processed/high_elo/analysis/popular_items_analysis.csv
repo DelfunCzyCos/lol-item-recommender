@@ -1,0 +1,132 @@
+﻿category,item_id,name,liczba_zakupow,liczba_graczy,liczba_meczow,win_rate
+boots,3158,Ioniańskie Buty Jasności Umysłu,7478,2210,3608,51.26
+boots,3020,Obuwie Maga,7183,2014,3731,49.74
+boots,3047,Pancerniaki,6750,2413,3272,50.89
+boots,3009,Buty Prędkości,5221,1798,3083,52.46
+boots,3111,Obuwie Merkurego,4938,1929,2724,51.56
+boots,3006,Nagolenniki Berserkera,4278,1512,2943,48.5
+boots,3008,Nagolenniki Pasibrzucha,2603,907,2100,53.36
+boots,3175,Buty Miotacza Zaklęć,26,17,26,69.23
+boots,3168,Nieśmiertelna Ścieżka,9,9,9,44.44
+boots,3174,Opancerzone Natarcie,9,9,9,44.44
+boots,3173,Spętane Kruszyciele,4,4,4,25.0
+boots,3171,Karmazynowa Klarowność,3,3,3,33.33
+boots,3170,Żwawy Marsz,1,1,1,100.0
+legendary,3031,Ostrze Nieskończoności,4787,1581,3042,55.15
+legendary,4645,Płomień Cienia,4385,1466,2815,50.51
+legendary,3036,Pozdrowienia Lorda Dominika,3882,1451,2473,54.35
+legendary,6333,Taniec Śmierci,3422,1270,2295,57.22
+legendary,3089,Zabójczy Kapelusz Rabadona,3233,1246,2145,55.95
+legendary,3157,Klepsydra Zhonyi,3211,1382,2055,55.34
+legendary,6699,Woltaiczny Cyklomiecz,3012,1028,2308,52.42
+legendary,3190,Naszyjnik Żelaznych Solari,2542,965,2145,51.57
+legendary,2503,Pochodnia Mrocznego Ognia,2387,853,1946,50.78
+legendary,3071,Czarny Tasak,2245,939,1784,51.8
+legendary,4646,Przepływ Burzy,2199,821,1830,53.75
+legendary,3109,Przysięga Rycerska,2138,804,1809,56.31
+legendary,6676,Kolekcjoner,2037,861,1713,51.01
+legendary,3100,Zmora Licza,2027,759,1702,49.48
+legendary,3078,Moc Trójcy,1933,875,1635,50.13
+legendary,6653,Udręka Liandry'ego,1891,735,1543,52.62
+legendary,2510,Zmierzch i Brzask,1767,685,1520,49.29
+legendary,6672,Pogromca Krakenów,1741,726,1506,51.58
+legendary,3032,Nieokiełznane Strzały Yun Tal,1699,654,1480,50.62
+legendary,3179,Glewia Umbry,1625,598,1420,51.26
+legendary,6673,Nieśmiertelny Łuklerz,1613,731,1408,51.64
+legendary,3152,Hextechowy Pas Rakietowy,1588,752,1394,49.31
+legendary,6617,Odnowienie Kamienia Księżycowego,1496,670,1358,51.4
+legendary,3041,Wykradacz Dusz Mejai,1448,617,1284,77.0
+legendary,2520,Łamacz Bastionów,1443,540,1279,54.05
+legendary,3118,Złowrogość,1439,617,1285,54.55
+legendary,6655,Echo Luden,1348,614,1173,49.41
+legendary,3124,Ostrze Gniewu Guinsoo,1311,566,1187,53.01
+legendary,6692,Zaćmienie,1221,615,1089,48.48
+legendary,3814,Ostrze Nocy,1211,577,1029,57.06
+legendary,2523,Hexoptyka C44,1203,601,1093,48.71
+legendary,6695,Wężowy Kieł,1156,608,1020,51.3
+legendary,4633,Szczelinotwórca,1129,552,1027,53.85
+legendary,6620,Echa Helii,1116,486,1041,50.81
+legendary,3135,Kostur Pustki,1107,549,901,52.57
+legendary,6697,Pycha,1087,534,1000,49.49
+legendary,3085,Huragan Runaana,1077,476,1004,50.51
+legendary,3050,Konwergencja Zeke'a,1075,452,998,52.93
+legendary,3153,Ostrze Zniszczonego Króla,1075,499,980,48.65
+legendary,3142,Widmowe Ostrze Youmuu,1019,480,908,52.11
+legendary,3222,Błogosławieństwo Mikaela,1019,488,968,50.05
+legendary,2517,Bezustanny Głód,1003,480,880,58.03
+legendary,6675,Migoczące Ostrze Navori,989,451,919,55.51
+legendary,3161,Włócznia Shojin,974,470,878,54.21
+legendary,3026,Anioł Stróż,952,601,714,59.87
+legendary,3504,Ognisty Trybularz,939,452,885,52.5
+legendary,3302,Ostatni Przystanek,937,451,873,55.92
+legendary,6698,Bluźniercza Hydra,932,394,873,49.25
+legendary,3116,Kryształowy Kostur Rylai,913,444,829,53.78
+legendary,3508,Złodziej Esencji,903,410,844,48.17
+legendary,3033,Śmiertelne Przypomnienie,900,535,782,54.22
+legendary,3115,Ząb Nashora,876,402,818,49.32
+legendary,6631,Łamacz Falangi,870,367,826,50.8
+legendary,3742,Pancerz Umrzyka,866,460,780,53.7
+legendary,3003,Kostur Archanioła,801,324,740,55.43
+legendary,6694,Uraza Seryldy,786,414,693,55.85
+legendary,3087,Kosa Statikka,770,388,728,49.35
+legendary,4005,Imperialny Mandat,751,369,689,56.86
+legendary,3156,Paszcza Malmortiusa,742,455,649,58.22
+legendary,3107,Odkupienie,738,374,699,55.01
+legendary,3143,Omen Randuina,737,469,637,56.72
+legendary,6665,Jak'Sho Zmienny,735,476,655,57.14
+legendary,2504,Kaeniczna Powłoka,731,458,651,55.81
+legendary,3053,Gruboskórność Steraka,717,304,653,57.88
+legendary,6657,Różdżka Wieków,707,302,660,51.49
+legendary,3046,Widmowy Tancerz,704,378,657,54.12
+legendary,3748,Kolosalna Hydra,697,283,667,52.8
+legendary,2065,Pieśń Bitewna Shurelyi,688,356,647,54.94
+legendary,3094,Ognista Armata,672,384,623,53.72
+legendary,3004,Manamune,664,378,634,48.19
+legendary,3074,Krwiożercza Hydra,654,281,633,52.45
+legendary,6696,Aksjomatyczny Łuk,649,306,609,52.7
+legendary,3075,Kolczasta Kolczuga,612,425,575,55.39
+legendary,3065,Oblicze Ducha,611,326,557,56.3
+legendary,3110,Mroźne Serce,601,407,564,59.23
+legendary,3095,Klinga Burzy,597,299,569,49.08
+legendary,3084,Stalowe Serce,584,338,557,48.12
+legendary,3072,Krwiopijec,566,344,532,56.36
+legendary,3146,Miecz-Pistolet Hextech,551,249,530,47.37
+legendary,6610,Rozdarte Niebo,548,304,516,52.74
+legendary,3068,Słoneczna Egida,497,274,479,54.93
+legendary,8010,Klątwa Krwawego Listu,470,280,425,55.11
+legendary,2524,Dudy Bandle,462,261,441,53.46
+legendary,2502,Nieskończona Rozpacz,450,248,433,60.44
+legendary,3137,Kryptokwiat,404,229,380,58.17
+legendary,4401,Siła Natury,404,246,376,53.71
+legendary,4629,Kosmiczny Impuls,394,225,378,58.88
+legendary,3102,Całun Banshee,386,255,338,60.36
+legendary,2525,Uprząż Protoplazmowa,368,183,349,56.79
+legendary,6616,Kostur Płynącej Wody,355,191,349,56.34
+legendary,4628,Skupienie Horyzontalne,345,158,331,53.91
+legendary,3073,Eksperymentalny Hexpierśnik,324,193,314,47.84
+legendary,3091,Koniec Rozumu,319,212,303,54.55
+legendary,6664,Głucha Poświata,294,207,285,54.42
+legendary,3181,Kadłubołamacz,247,120,246,51.82
+legendary,8020,Maska Otchłani,242,153,232,60.74
+legendary,6621,Rdzeń Świtu,222,114,221,59.01
+legendary,6662,Lodowa Rękawica,200,120,197,53.5
+legendary,2512,Bełty Łowcy Diabłów,189,118,185,52.38
+legendary,3119,Nadejście Zimy,182,73,178,60.44
+legendary,2526,Szepczący Diadem,163,114,161,57.67
+legendary,3139,Rtęciowy Bułat,163,125,158,57.67
+legendary,3083,Plemienna Zbroja,149,99,149,46.98
+legendary,2501,Krwawa Kolczuga Władcy,130,82,128,56.15
+legendary,3165,Morellonomicon,95,84,92,52.63
+legendary,2522,Aktualizator,86,41,85,52.33
+legendary,6609,Chempunkowy Łańcuchowy Miecz,52,46,51,50.0
+starter,1082,Tajemnicza Pieczęć,8902,2022,3908,52.53
+starter,1056,Pierścień Dorana,8610,2200,4094,50.63
+starter,1055,Ostrze Dorana,5774,1728,3414,50.33
+starter,1101,Szczeniak Żaroszpona,4420,1207,3274,50.0
+starter,1102,Pisklę Podmuszka,2943,917,2421,49.71
+starter,1083,Kosa,2516,901,1995,50.2
+starter,3070,Łza Bogini,2395,933,1857,49.85
+starter,1054,Tarcza Dorana,2168,972,1885,49.35
+starter,1103,Sadzonka Mchściciela,1099,430,1037,51.14
+support,3869,Astralny Sprzeciw,76,66,74,40.79
+support,3865,Atlas Świata,29,27,29,51.72
