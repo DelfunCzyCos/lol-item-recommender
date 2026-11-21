@@ -1,4 +1,5 @@
 
+import json
 import requests
 import pandas as pd
 from pathlib import Path
@@ -112,5 +113,98 @@ def download_item_data():
     print(df[["itemId", "name", "price", "category"]].to_string(index=False))
 
 
+def download_item_recipes(version: str | None = None) -> dict[int, dict]:
+    """Pobiera drzewko receptur (komponenty i koszty łączenia) z Data Dragon."""
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    if version is None:
+        versions_resp = requests.get(f"{BASE_URL}/api/versions.json", timeout=20)
+        versions_resp.raise_for_status()
+        version = versions_resp.json()[0]
+
+    url = f"{BASE_URL}/cdn/{version}/data/pl_PL/item.json"
+    response = requests.get(url, timeout=20)
+    response.raise_for_status()
+    data = response.json()["data"]
+
+    recipes = {}
+    for item_id_str, item in data.items():
+        if not item_id_str.isdigit():
+            continue
+        iid = int(item_id_str)
+        gold = item.get("gold", {})
+        recipes[iid] = {
+            "name": item.get("name", f"Item {iid}"),
+            "total": int(gold.get("total", 0)),
+            "base": int(gold.get("base", 0)),
+            "from": [int(x) for x in item.get("from", []) if str(x).isdigit()],
+        }
+
+    recipes_path = OUTPUT_DIR / "item_recipes.json"
+    with open(recipes_path, "w", encoding="utf-8") as f:
+        json.dump(recipes, f, ensure_ascii=False)
+    print(f"Zapisano receptury ({len(recipes)} przedmiotów, wersja {version}) do {recipes_path}")
+    return recipes
+
+
+def download_item_icons(
+    catalog_path: Path = OUTPUT_DIR / "items_catalog.csv",
+    icons_dir: Path = Path("assets/item_icons"),
+):
+    """Pobiera ikony PNG przedmiotów z Data Dragon do lokalnego folderu assets/item_icons."""
+    if not catalog_path.exists():
+        raise FileNotFoundError(f"Brak katalogu: {catalog_path}")
+
+    icons_dir.mkdir(parents=True, exist_ok=True)
+    df = pd.read_csv(catalog_path)
+    downloaded = 0
+
+    for row in df.itertuples(index=False):
+        iid = int(row.itemId)
+        url = getattr(row, "image_url", None)
+        if not isinstance(url, str) or not url:
+            continue
+        out_file = icons_dir / f"{iid}.png"
+        if out_file.exists():
+            continue
+        resp = requests.get(url, timeout=15)
+        if resp.status_code == 200:
+            out_file.write_bytes(resp.content)
+            downloaded += 1
+
+    print(f"Pobrano {downloaded} nowych ikon do {icons_dir}")
+
+
+def download_champion_icons(
+    version: str | None = None,
+    icons_dir: Path = Path("assets/champion_icons"),
+):
+    """Pobiera kwadratowe ikony bohaterów z Data Dragon do assets/champion_icons."""
+    icons_dir.mkdir(parents=True, exist_ok=True)
+    if version is None:
+        versions_resp = requests.get(f"{BASE_URL}/api/versions.json", timeout=20)
+        versions_resp.raise_for_status()
+        version = versions_resp.json()[0]
+
+    url = f"{BASE_URL}/cdn/{version}/data/en_US/champion.json"
+    resp = requests.get(url, timeout=20)
+    resp.raise_for_status()
+    champs = resp.json()["data"]
+
+    downloaded = 0
+    for champ_key, champ_info in champs.items():
+        image_full = champ_info.get("image", {}).get("full", f"{champ_key}.png")
+        out_file = icons_dir / f"{champ_key}.png"
+        if out_file.exists():
+            continue
+        img_url = f"{BASE_URL}/cdn/{version}/img/champion/{image_full}"
+        img_resp = requests.get(img_url, timeout=15)
+        if img_resp.status_code == 200:
+            out_file.write_bytes(img_resp.content)
+            downloaded += 1
+
+    print(f"Pobrano {downloaded} ikon bohaterów (wersja {version}) do {icons_dir}")
+
+
 if __name__ == "__main__":
     download_item_data()
+    download_item_recipes()
